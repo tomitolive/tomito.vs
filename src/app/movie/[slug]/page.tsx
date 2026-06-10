@@ -190,12 +190,12 @@ export default async function MoviePage({ params }: Props) {
 
               {/* Watch Buttons */}
               <div className="flex flex-col md:flex-row gap-2 md:gap-3 pt-1 md:pt-2 justify-center md:justify-start">
-                <ProtectedLink
-                  encodedUrl={btoa(`https://tv.tomito.xyz/movie/${slug}`)}
+                <a
+                  href={`/watch/movie/${slug}`}
                   className="px-5 md:px-6 py-2 md:py-2.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition-colors text-center text-sm md:text-base tracking-wider"
                 >
                   مشاهدة الآن
-                </ProtectedLink>
+                </a>
                 {data.imdb_id && (
                   <a
                     href={`https://www.imdb.com/title/${data.imdb_id}`}
